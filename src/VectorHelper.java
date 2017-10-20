@@ -11,12 +11,14 @@ import java.util.Scanner;
  */
 public class VectorHelper {
     
+    
+    public int max,min ;
     public VectorHelper() {
 
 	}
 	
 
-	public static int [] tri (int vector[]){
+	public int [] tri (int vector[]){
 		
 		int i,j = 0 ;
 		int permut = 0 ;
@@ -36,7 +38,7 @@ public class VectorHelper {
 	}
 
 
-	public static int [] Somme (int vector1[],int vector2[] ) throws LengthException{
+	public  int [] Somme (int vector1[],int vector2[] ) throws LengthException{
 	int i  ;
 	
 	if (vector1.length != vector2.length) throw new LengthException() ; 
@@ -50,7 +52,7 @@ public class VectorHelper {
 	
 	}
 
-	public static int [] InverserVector (int vector[]){
+	public  int [] InverserVector (int vector[]){
 		
 		int i=0;
 		int inverse;
@@ -65,10 +67,10 @@ public class VectorHelper {
 		return(vector) ;
 	}
 
-	public static void MinMax (int vector[]){
-		
-		int min = vector[0] ;
-		int max = vector[0] ;
+	public  void MinMax (int vector[]){
+		int [] Min_Max = {0,0};
+		min = vector[0] ;
+		max = vector[0] ;
 		int i;
 		for (i=1;i<vector.length;i++){
 			if(vector[i]<min){
@@ -80,11 +82,10 @@ public class VectorHelper {
 			}
 		}
 		System.out.println("Maximum = " + max +" Minimum = " + min);
-		
-		
+	
 	} 
 	
-	public static int [] Formule (int vector []) {
+	public  int [] Formule (int vector []) {
 		
 		int i = 0 ;
 		for(i=0 ; i< vector.length ; i++){
@@ -94,7 +95,7 @@ public class VectorHelper {
 	return(vector);
 	}
 
-	public static void AfficherVector(int vector[]) {
+	public  void AfficherVector(int vector[]) {
 		
 	for (int i = 0; i < vector.length; i++){
 		
@@ -102,7 +103,7 @@ public class VectorHelper {
 		}
 	}
 
-	public static int[] RemplirVector ( int vector[] ) {
+	public  int[] RemplirVector ( int vector[] ) {
 		
 	Scanner keyb = new Scanner(System.in)	;
 	for (int i = 0; i < vector.length; i++){
